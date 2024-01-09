@@ -13,6 +13,15 @@ export default function Jobs(){
     .then(response => {setJobs(response.data)})
   },[]);
 
+  // UPDATE, atualiza dados na api
+  async function updatejob(id){
+    try {
+      navigate(`/newupdate/${id}`);      
+    } catch (error) {
+      alert('Erro ao atualizar!');      
+    }
+  }
+
   return(
     <div data-testid="mycard" className="card border-primary" style={{marginTop: '20px'}} >
       <div className="card-header bg-primary" style={{color: '#fff'}}>
@@ -41,7 +50,8 @@ export default function Jobs(){
                   <td>
 
                     <button data-testid="mybtn1" type="button"
-                    className="btn btn-outline-info">Editar</button>
+                    className="btn btn-outline-info" style={{margin: '2px'}}
+                    onClick={() => updatejob(job.id)}>Editar</button>
 
                     <button data-testid="mybtn2" type="button"
                     className="btn btn-outline-danger">Excluir</button>
