@@ -24,4 +24,8 @@ describe('Testes da tela Jobs', () => {
     expect(screen.getByTestId('mytable')).toBeInTheDocument();
   });
 
+  it('Existe o botão editar em jobs?', () => {
+    expect(screen.getByTestId('mybtn1')).toBeInTheDocument();
+  });
+
 }); 
