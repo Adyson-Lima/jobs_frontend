@@ -20,4 +20,8 @@ describe('Testes da tela Jobs', () => {
     expect(screen.getByTestId('mylink')).toBeInTheDocument();
   });
 
+  it('Existe tabela em Jobs?', () => {
+    expect(screen.getByTestId('mytable')).toBeInTheDocument();
+  });
+
 }); 
