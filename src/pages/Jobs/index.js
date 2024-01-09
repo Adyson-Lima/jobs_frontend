@@ -22,6 +22,16 @@ export default function Jobs(){
     }
   }
 
+  // DELETE, exclui elemento na api
+  async function deleteJob(id){
+    try {
+      await api.delete(`api/v1/jobs/${id}`,{});
+      setJobs(my_jobs.filter(job => job.id !== id));    
+    } catch (error) {
+      alert('Erro ao excluir Job!');      
+    }
+  }
+
   return(
     <div data-testid="mycard" className="card border-primary" style={{marginTop: '20px'}} >
       <div className="card-header bg-primary" style={{color: '#fff'}}>
@@ -54,7 +64,8 @@ export default function Jobs(){
                     onClick={() => updatejob(job.id)}>Editar</button>
 
                     <button data-testid="mybtn2" type="button"
-                    className="btn btn-outline-danger">Excluir</button>
+                    className="btn btn-outline-danger" style={{margin: '2px'}}
+                    onClick={() => deleteJob(job.id)}>Excluir</button>
 
                   </td>
               </tr>
