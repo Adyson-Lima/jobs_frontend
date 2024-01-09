@@ -33,7 +33,8 @@ export default function Jobs(){
                   <button data-testid="mybtn1" type="button"
                   className="btn btn-outline-info">Editar</button>
 
-                  
+                  <button data-testid="mybtn2" type="button"
+                  className="btn btn-outline-danger">Excluir</button>
 
                 </td>
             </tr>
