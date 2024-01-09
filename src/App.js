@@ -1,7 +1,8 @@
+import JobsRouter from './routes';
 
 function App() {
   return (
-    <></>
+    <JobsRouter/>
   );
 }
 
