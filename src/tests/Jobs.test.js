@@ -16,4 +16,8 @@ describe('Testes da tela Jobs', () => {
     expect(screen.getByTestId('mycard')).toBeInTheDocument();
   });
 
+  it('Existe o link Novo em Jobs?', () => {
+    expect(screen.getByTestId('mylink')).toBeInTheDocument();
+  });
+
 }); 
